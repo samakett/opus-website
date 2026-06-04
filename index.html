@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Post-Shatter World — Five Sovereign Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-fracture"></div>
+  <span class="eyebrow mono">A Post-Shatter Political Reality</span>
+  <h1>FIVE SOVEREIGN<br>SYSTEMS</h1>
+  <p class="tagline">The Shatter did not destroy civilization. It destroyed synchronization. Five incompatible definitions of reality now share one fractured world.</p>
+  <span class="scroll-cue mono">↓ Descend into the fracture</span>
+</header>
+
+<!-- THESIS -->
+<section class="thesis reveal">
+  <div class="section-head">
+    <span class="mono">The World Thesis</span>
+    <h2>No Single Authority Governs Reality</h2>
+    <p>Reality is enforced locally by whichever system still holds coherence. Each is valid. None are universal. Borders no longer guarantee control — authority decays with distance.</p>
+  </div>
+  <div class="thesis-grid">
+    <div class="thesis-cell"><div class="glyph">⚔️</div><h4>Steel</h4><p>reality is force</p></div>
+    <div class="thesis-cell"><div class="glyph">🌊</div><h4>Gold</h4><p>reality is exchange</p></div>
+    <div class="thesis-cell"><div class="glyph">🕯️</div><h4>Faith</h4><p>reality is belief</p></div>
+    <div class="thesis-cell"><div class="glyph">🔥</div><h4>Motion</h4><p>reality is movement</p></div>
+    <div class="thesis-cell"><div class="glyph">📜</div><h4>Record</h4><p>reality is record</p></div>
+  </div>
+</section>
+
+<!-- KINGDOMS -->
+<section class="reveal">
+  <div class="section-head">
+    <span class="mono">The Five Kingdoms</span>
+    <h2>Different Answers to One Question</h2>
+    <p>“What makes rule real?” Each kingdom is not merely a nation — it is a distinct interpretation of legitimacy, embodied by a single ruler who <em>is how their kingdom behaves</em>.</p>
+  </div>
+  <div class="kingdoms" id="kingdomCards"></div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare reveal">
+  <div class="section-head">
+    <span class="mono">Compare & Contrast</span>
+    <h2>The Systems Side by Side</h2>
+    <p>Toggle kingdoms to compare how each defines power, holds territory, and fractures under stress. Tap a banner to add or remove it.</p>
+  </div>
+  <div class="compare-controls" id="compareControls"></div>
+  <div class="compare-wrap">
+    <table class="compare-table" id="compareTable"></table>
+  </div>
+</section>
+
+<!-- TENSION -->
+<section class="tension reveal">
+  <div class="section-head">
+    <span class="mono">The Strategic Atlas</span>
+    <h2>Where Systems Collide</h2>
+    <p>The world does not break randomly. It fractures along structural tension axes — where one definition of reality grinds against another.</p>
+  </div>
+  <div class="axes">
+    <div class="axis">
+      <span class="mono">Military × Mobility</span>
+      <div class="axis-vs"><span style="color:var(--iron)">Ironhold</span><span class="v">vs</span><span style="color:var(--motion)">Redveil</span></div>
+      <p>Static fortresses against unpredictable movement. Land that is held versus land that is only traversed.</p>
+    </div>
+    <div class="axis">
+      <span class="mono">Wealth × Control</span>
+      <div class="axis-vs"><span style="color:var(--gold)">Sunspire</span><span class="v">vs</span><span style="color:var(--record)">Guilds</span></div>
+      <p>Economic influence against bureaucratic enforcement. Flow that owns versus record that defines.</p>
+    </div>
+    <div class="axis">
+      <span class="mono">Faith × Law</span>
+      <div class="axis-vs"><span style="color:var(--faith)">Hallowspire</span><span class="v">vs</span><span style="color:var(--record)">Guilds</span></div>
+      <p>Divine authority against recorded authority. Two systems each claiming to define what is true.</p>
+    </div>
+    <div class="axis">
+      <span class="mono">Ideology × Survival</span>
+      <div class="axis-vs"><span style="color:var(--faith)">Hallowspire</span><span class="v">vs</span><span style="color:var(--motion)">Redveil</span></div>
+      <p>Moral order against adaptive pragmatism. Doctrine that must be obeyed versus necessity that cannot wait.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="reveal">
+  <div class="glyph-row">⚔️ 🌊 🕯️ 🔥 📜</div>
+  <p>“Meaning is not given. It is negotiated with the world itself.” — The Post-Shatter world exists in permanent equilibrium: not collapsed, not unified, not rebuilding. Permanently unstable. Permanently structured. Permanently contradictory.</p>
+</footer>
+
+<script>
+const kingdoms = [
+  {
+    key:"ironhold", glyph:"⚔️", name:"Ironhold", sub:"The Crown of Oath and Steel",
+    accent:"var(--iron)", color:"#8a9298",
+    power:"Martial Sovereignty", powerLine:"Power is real only when it can be defended.",
+    principle:"Authority is earned through the ability to hold ground.",
+    ruler:"King Kael Varran", rulerEpithet:"the Oath-Scarred",
+    embodiment:"Violence made administrative",
+    territory:"Mountain chains & fortress passes",
+    control:"High-control corridors; defensive only",
+    legitimacy:"Combat succession; oath duels",
+    emotion:"Awe + Fear",
+    stability:"High internal · Moderate external",
+    geo:"Whoever controls the pass defines the boundary of reality."
+  },
+  {
+    key:"sunspire", glyph:"🌊", name:"Sunspire", sub:"The Golden Ledger of Trade",
+    accent:"var(--gold)", color:"#d4a44c",
+    power:"Economic Sovereignty", powerLine:"Power is real only when it flows.",
+    principle:"Authority belongs to those who control exchange.",
+    ruler:"Lady Serene Val-Cor", rulerEpithet:"the Golden Arbiter",
+    embodiment:"Exchange made governance",
+    territory:"Port cities & maritime trade lattice",
+    control:"Flexible influence via economic networks",
+    legitimacy:"Wealth creation; civic contract law",
+    emotion:"Admiration + Envy",
+    stability:"Moderate internal · High external",
+    geo:"Flow defines ownership more than land."
+  },
+  {
+    key:"hallowspire", glyph:"🕯️", name:"Hallowspire", sub:"The Radiant Law of Alignment",
+    accent:"var(--faith)", color:"#c9a86a",
+    power:"Spiritual Sovereignty", powerLine:"Power is real only when it is believed.",
+    principle:"Authority is the manifestation of divine order.",
+    ruler:"High Lumen Seraphine Oris", rulerEpithet:"",
+    embodiment:"Belief made law",
+    territory:"Central spire-city & pilgrimage zones",
+    control:"Strong at core, diminishing outward",
+    legitimacy:"Divine mandate; ritual succession",
+    emotion:"Reverence + Unease",
+    stability:"Moderate internal · Moderate external",
+    geo:"Truth weakens with distance from the sacred center."
+  },
+  {
+    key:"redveil", glyph:"🔥", name:"Redveil", sub:"The Moving Sovereignty of Survival",
+    accent:"var(--motion)", color:"#b5462f",
+    power:"Adaptive Sovereignty", powerLine:"Power is real only when it moves.",
+    principle:"Authority belongs to those who endure and adapt fastest.",
+    ruler:"Kaelith “Redwake” Sarn", rulerEpithet:"the Moving Crown",
+    embodiment:"Survival made political",
+    territory:"Nomadic steppe & desert arcs",
+    control:"Fluid, temporary occupation",
+    legitimacy:"Survival & demonstrated adaptability",
+    emotion:"Fascination + Danger",
+    stability:"Moderate internal · High external",
+    geo:"Land is not held. It is traversed."
+  },
+  {
+    key:"guilds", glyph:"📜", name:"Shattered Guilds", sub:"The Ledger-State of Record",
+    accent:"var(--record)", color:"#6f8a8d",
+    power:"Administrative Sovereignty", powerLine:"Power is real only when it is recorded.",
+    principle:"Authority exists only through documentation.",
+    ruler:"Arch-Registrar Dorian Pell", rulerEpithet:"the Living Ledger",
+    embodiment:"Record made reality",
+    territory:"Dense urban sprawl & archive districts",
+    control:"Vertical layers of administration",
+    legitimacy:"Record supremacy; law via documentation",
+    emotion:"Respect + Tension",
+    stability:"High internal · Low external",
+    geo:"If it is not recorded, it is not real."
+  }
+];
+
+// ----- Build kingdom cards -----
+const cardWrap = document.getElementById('kingdomCards');
+kingdoms.forEach(k=>{
+  const el = document.createElement('article');
+  el.className='k-card';
+  el.style.setProperty('--accent', k.accent);
+  el.innerHTML = `
+    <span class="k-glyph">${k.glyph}</span>
+    <h3>${k.name}</h3>
+    <div class="k-sub">${k.sub}</div>
+    <div class="k-power"><span class="mono">${k.power}</span><em>${k.powerLine}</em></div>
+    <div class="k-principle">${k.principle}</div>
+    <div class="k-ruler">Ruler: <strong>${k.ruler}</strong>${k.rulerEpithet?', '+k.rulerEpithet:''}<br>
+      <span class="mono" style="color:var(--accent)">${k.embodiment}</span></div>`;
+  cardWrap.appendChild(el);
+});
+
+// ----- Compare controls -----
+const controls = document.getElementById('compareControls');
+const active = new Set(kingdoms.map(k=>k.key));
+kingdoms.forEach(k=>{
+  const b=document.createElement('button');
+  b.className='chip active';
+  b.textContent=k.name;
+  b.style.setProperty('--chipcolor', k.color);
+  b.onclick=()=>{
+    if(active.has(k.key)){
+      if(active.size<=2) return; // keep at least 2
+      active.delete(k.key); b.classList.remove('active');
+    } else { active.add(k.key); b.classList.add('active'); }
+    renderTable();
+  };
+  controls.appendChild(b);
+});
+
+// ----- Compare table -----
+const rows = [
+  ["Type of Power","power"],
+  ["Defining Law","powerLine"],
+  ["Governing Principle","principle"],
+  ["Ruler","ruler"],
+  ["Embodied As","embodiment"],
+  ["Territory","territory"],
+  ["Control Type","control"],
+  ["Legitimacy Source","legitimacy"],
+  ["Emotional Imprint","emotion"],
+  ["Stability","stability"],
+  ["Geographic Law","geo"],
+];
+const table = document.getElementById('compareTable');
+function renderTable(){
+  const cols = kingdoms.filter(k=>active.has(k.key));
+  let html = '<thead><tr><th></th>';
+  cols.forEach(k=>{ html+=`<th><span class="dot" style="background:${k.color}"></span>${k.glyph} ${k.name}</th>`; });
+  html+='</tr></thead><tbody>';
+  rows.forEach(([label,field])=>{
+    html+=`<tr><th>${label}</th>`;
+    cols.forEach(k=>{ html+=`<td>${k[field]}</td>`; });
+    html+='</tr>';
+  });
+  html+='</tbody>';
+  table.innerHTML=html;
+}
+renderTable();
+
+// ----- Scroll reveal -----
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
